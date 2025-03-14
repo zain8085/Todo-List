@@ -1,0 +1,251 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #bdc3c7;
+    background: -webkit-linear-gradient(to right, #bdc3c7, #2c3e50); 
+    background: linear-gradient(to right, #bdc3c7, #2c3e50);
+    color: black;
+    font-family: "Montserrat", sans-serif;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content:center;
+    margin: 80px auto 0 auto;
+    max-width: 500px;
+    border: 3px solid #2c3e50;
+    border-radius: 10px;
+    padding: 20px 15px;
+    backdrop-filter: blur(5px);
+    
+}
+.stats-container{
+    font-weight: 800;
+    padding: 30px;
+    border-radius: 20px;
+    border-bottom: 2px solid #2c3e50;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    width: 100%;
+}
+.details{
+    width: 100%;
+}
+.details p{
+    font-size: 18px;
+    font-weight: 600;
+}
+#progressBar{
+    width: 100%;
+    height: 8px;
+    background-color: #bdc3c7;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+#progress{
+    width: 0%;
+    height: 8px;
+    background-color: #2c3e50;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+#numbers{
+    width: 100px;
+    height: 100px;
+    background-color:#bdc3c7;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+form{
+    margin-top: 60px;
+    width: 100%;
+    display: flex;
+    gap: 20px;
+}
+input{
+    flex: 1;
+    padding: 10px;
+    background-color:#bdc3c7;
+    border: 2px solid #2c3e50;
+    border-radius: 10px;
+    outline: none;
+    color: black;
+    font-size: 15px;
+}
+button{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #2c3e50;
+    color: #bdc3c7;
+    font-size: 25px;
+    font-weight: 600;
+    outline: none;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: #bdc3c7;
+    color: #2c3e50;
+    font-size: 30px;
+    font-weight: 600;
+    transition: all 0.3s ease-in;
+}
+
+
+/* after js */
+#task-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 30px;
+    width: 100%;
+    list-style: none;
+
+    /* Scrollbar styles */
+    max-height: 250px;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+
+#task-list::-webkit-scrollbar {
+    width: 4px;
+}
+
+#task-list::-webkit-scrollbar-track {
+    background: #2c3e50;
+    border-radius: 6px;
+}
+
+#task-list::-webkit-scrollbar-thumb {
+    background: #bdc3c7;
+    border-radius: 6px;
+}
+
+#task-list::-webkit-scrollbar-thumb:hover {
+    background: #1a252f;
+}
+
+.taskItem {
+    display: flex;
+    background-color: #2c3e50;
+    padding: 10px;
+    border-radius: 10px;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.task{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.task p {
+    flex-grow: 1;
+    word-break: break-word;
+    color: white;
+}
+
+.task input.edit-input {
+    flex-grow: 1;
+    height: auto;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #bdc3c7;
+    outline: none;
+    font-size: 16px;
+}
+
+.task p, .edit-input {
+    width: 100%;
+    text-align: left;
+    font-size: 16px;
+    border: none;
+    background: transparent;
+    outline: none;
+}
+
+.task input[type="checkbox"] {
+    flex-shrink: 0;
+}
+
+.edit-input {
+    width: 100%;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 16px;
+    color: white;
+}
+
+.task input{
+    height: 20px;
+    width: 20px;
+    flex-shrink: 0;
+    min-width: 20px;
+
+}
+
+.completed p{
+    text-decoration: line-through;
+    color: #bdc3c7;
+    max-width: 100%;
+    word-wrap: break-word;
+    margin-bottom: 10px;
+
+}
+
+.taskItem img{
+    width: 24px;
+    height: 24px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.taskItem .icons{
+    display: flex;
+}
+
+
+@media (max-width: 600px){
+    .container{
+        width: 350px;
+        margin: 50px auto 0 auto;
+    }
+    .stats-container{
+        width: 340px;
+    }
+    .details h1{
+        font-size: 25px;
+    }
+    .details p{
+        font-size: 18px;
+        font-weight: 600;
+    }
+    #numbers{
+        height: 80px ;
+        width: 80px ;
+        font-size: 25px;
+    }
+}
