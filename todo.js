@@ -40,37 +40,24 @@ const deleteTask = (index) => {
     saveTasks();
 };
 
-
-
-
-
-
-
-
-
-
+//This is for edit the task.
 const editTask = (index) => {
   const taskItem = document.querySelectorAll(".taskItem")[index];
   const taskContainer = taskItem.querySelector(".task");
   const taskText = taskContainer.querySelector("p");
 
-  // Check if an input field already exists to prevent duplicates
   if (taskContainer.querySelector(".edit-input")) return;
 
-  // Create an input field and set its value
   const inputField = document.createElement("input");
   inputField.type = "text";
   inputField.value = tasks[index].text;
   inputField.classList.add("edit-input");
 
-  // Replace the <p> text with the input field
   taskContainer.replaceChild(inputField, taskText);
-  inputField.focus(); // Focus on input for immediate editing
+  inputField.focus();
 
-  // Save the edit on blur (when the user clicks away)
   inputField.addEventListener("blur", () => saveEdit(index, inputField));
 
-  // Save when the user presses Enter
   inputField.addEventListener("keydown", (e) => {
       if (e.key === "Enter") {
           saveEdit(index, inputField);
@@ -82,33 +69,12 @@ const saveEdit = (index, inputField) => {
   const newValue = inputField.value.trim();
   
   if (newValue) {
-      tasks[index].text = newValue; // Update task text
+      tasks[index].text = newValue; 
   }
 
-  updateTasksList(); // Refresh task list
-  saveTasks(); // Save changes to localStorage
+  updateTasksList(); 
+  saveTasks(); 
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 const updateStats = () => {
     const completeTasks = tasks.filter(task => task.completed).length;
@@ -163,12 +129,7 @@ document.getElementById('newTask').addEventListener('click',function(e){
     addTask();
 });
 
-
-
-
-
-
-
+//This is for animation when the tasks are completed.
 const blastConfetti = ()=>{
     const count = 200,
   defaults = {

@@ -227,7 +227,7 @@ button:hover{
     display: flex;
 }
 
-
+/* To make it responsive for only phones */
 @media (max-width: 600px){
     .container{
         width: 350px;
