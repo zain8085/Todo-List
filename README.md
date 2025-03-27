@@ -1,5 +1,3 @@
-Sure! Here's a basic structure for your README file for your To-Do list project. You can fill in any specific details about your project if you want to make it more personalized or descriptive.
-
 # To-Do List
 
 A simple and interactive To-Do list built with HTML, CSS, and JavaScript. This web application allows users to add, delete, and mark tasks as completed. It provides a clean, user-friendly interface to manage daily tasks efficiently.
